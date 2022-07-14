@@ -1,77 +1,103 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('/assets/fonts/Lora.ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter-Regular.otf');
+}
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('/assets/fonts/Inter-Black.otf');
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/NunitoSans-Regular.ttf');
+}
 * {
     margin: 0;
     padding: 0;
 }
-
 header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows, .form_block {
     display: flex;
     flex-direction: row;
 }
-
 .banner_navigation, .form_container {
     display: flex;
     flex-direction: column;
 }
-
 header {
     width: 100%;
     justify-content: space-around;
 }
-
 .header_logo {
     width: 127px;
     height: 50px;
 }
-
 nav {
     align-items: center;
 }
-
 .nav_item {
     text-decoration: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
     color: #000000;
 }
-
 .nav_item:not(:first-child) {
     margin-left: 57px;
 }
-
 .header_contacts {
     align-items: center;
 }
-
 .header_contacts-phone {
+    font-family: Nunito;
     margin-right: 33px;
     text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
 }
-
 .header_contacts-logo {
     width: 136px;
     height: 26px;
 }
-
 .banner {
     width: 100%;
     background-color: #436B65;
     height: 588px;
 }
-
 .banner_container-text {
     color: white;
     max-width: 868px;
     width: 100%;
     margin: 161px auto;
 }
-
 .banner_title, .banner_subtitle {
     margin-bottom: 20px;
 }
-
-.banner_subtitle {
-    max-width: 360px;
-    width: 100%;
+.banner_title {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 103.5%;
+    color: #FFFFFF;
 }
-
+.banner_subtitle {
+    width: 100%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
 .banner_btn {
     text-decoration: none;
     color: #2B2523;
@@ -79,6 +105,7 @@ nav {
     border-radius: 15px;
     width: 389px;
     height: 45px;
+    font-family: Inter;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -86,59 +113,57 @@ nav {
     text-align: center;
     padding: 13px 50px;
 }
-
 .active {
     display: flex;
 }
-
 .swiper {
     margin: 0 !important;
 }
-
 .banner_navigation-arrow {
     width: 50px;
     height: 20px;
 }
-
 .banner_container, .banner_background {
     max-width: 1043px;
 }
-
 .banner_background {
     border-radius: 0 200px 0 0;
 }
-
 .swiper_slide {
     max-width: 1043px;
 }
-
 .banner_navigation {
     max-width: 223px;
     width: 100%;
     margin: 199px 0 0 28px;
 }
-
 .banner_navigation-text {
     margin-bottom: 26px;
-    color: #FFFFFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
     font-size: 14px;
     line-height: 121.1%;
-}
-
-.banner_navigation-counter {
+    text-transform: uppercase;
     color: #FFFFFF;
+}
+.banner_navigation-counter {
+    font-family: Inter;
+    font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    line-height: 121.1%;
+    text-align: center;
+    color: #FFFFFF;
     margin-bottom: 24px;
 }
-
 #active_count {
+    font-family: Inter-bold;
     font-size: 24px;
     line-height: 24.22px;
     font-weight: 900;
     margin-right: 5px;
 }
-
 .form_container {
     max-width: 1043px;
     width: 100%;
@@ -146,15 +171,16 @@ nav {
     border-radius: 0 0 71px 0;
     padding: 51px 0 60px;
 }
-
 .form {
     max-width: 444px;
     width: 100%;
     margin-left: 141px;
     margin-top: 25px;
 }
-
 .form_title, .form_subtitle {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 600;
     font-size: 32px;
     line-height: 118.6%;
     color: #FFFFFF;
@@ -162,8 +188,8 @@ nav {
     width: 100%;
     margin-left: 141px;
 }
-
 .form_email {
+    font-family: Inter;
     border: none;
     width: 100%;
     height: 45px;
@@ -177,8 +203,8 @@ nav {
     color: #333333;
     margin-bottom: 15px;
 }
-
 .form_submit {
+    font-family: Inter;
     width: 258px;
     height: 45px;
     background: #93DACF;
@@ -192,31 +218,27 @@ nav {
     margin-right: 18px;
     cursor: pointer;
 }
-
 .form_label {
     max-width: 168px;
+    font-weight: 400;
+    font-family: Inter;
+    font-style: normal;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     color: #FFFFFF;
 }
-
 .current {
     border-bottom: 1px solid white;
 }
-
 .banner_navigation-text {
     max-width: 178px;
     padding-bottom: 6px;
 }
-
 .banner_navigation-block {
     margin-bottom: 26px;
 }
-
-
-
-.banner_navigation-arrow{
+.banner_navigation-arrow {
     background-image: url('/assets/images/arrow.png');
     background-color: transparent;
     background-size: contain;
@@ -226,11 +248,9 @@ nav {
     border: none;
     height: 7px;
 }
-
 .banner_navigation-arrow::after {
     display: none;
 }
-
 .arrow_next {
     transform: rotate(-360deg);
 }
@@ -238,7 +258,6 @@ nav {
     transform: rotate(-180deg);
     margin-right: 7px;
 }
-
 .swiper-button-disabled {
     opacity: .3;
 }
