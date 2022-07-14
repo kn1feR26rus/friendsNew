@@ -247,6 +247,7 @@ nav {
     background-position: center;
     border: none;
     height: 7px;
+    cursor: pointer;
 }
 .banner_navigation-arrow::after {
     display: none;
