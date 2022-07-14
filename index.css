@@ -3,12 +3,12 @@
     padding: 0;
 }
 
-header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows {
+header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows, .form_block {
     display: flex;
     flex-direction: row;
 }
 
-.banner_navigation {
+.banner_navigation, .form_container {
     display: flex;
     flex-direction: column;
 }
@@ -57,7 +57,6 @@ nav {
 }
 
 .banner_container-text {
-
     color: white;
     max-width: 868px;
     width: 100%;
@@ -66,6 +65,11 @@ nav {
 
 .banner_title, .banner_subtitle {
     margin-bottom: 20px;
+}
+
+.banner_subtitle {
+    max-width: 360px;
+    width: 100%;
 }
 
 .banner_btn {
@@ -101,7 +105,7 @@ nav {
 }
 
 .banner_background {
-    border-radius: 0 150px 0 0;
+    border-radius: 0 200px 0 0;
 }
 
 .swiper_slide {
@@ -111,4 +115,89 @@ nav {
 .banner_navigation {
     max-width: 223px;
     width: 100%;
+    margin: 199px 0 0 28px;
+}
+
+.banner_navigation-text {
+    margin-bottom: 26px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 121.1%;
+}
+
+.banner_navigation-counter {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#active_count {
+    font-size: 24px;
+    line-height: 24.22px;
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.form_container {
+    max-width: 1043px;
+    width: 100%;
+    background: #436B65;
+    border-radius: 0 0 71px 0;
+
+    padding: 51px 0 60px;
+}
+
+.form {
+    max-width: 444px;
+    width: 100%;
+    margin-left: 141px;
+    margin-top: 25px;
+}
+
+.form_title, .form_subtitle {
+    font-size: 32px;
+    line-height: 118.6%;
+    color: #FFFFFF;
+    max-width: 885px;
+    width: 100%;
+    margin-left: 141px;
+}
+
+.form_email {
+    border: none;
+    width: 100%;
+    height: 45px;
+    background: #E2E7EE;
+    border-radius: 15px;
+    padding-left: 34px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 118.6%;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.form_submit {
+    width: 258px;
+    height: 45px;
+    background: #93DACF;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #2B2523;
+    border: none;
+    margin-right: 18px;
+}
+
+.form_label {
+    max-width: 168px;
+    font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #FFFFFF;
 }
