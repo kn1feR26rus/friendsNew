@@ -1,7 +1,8 @@
 $(document).ready(function () {
+
   let swiper = new Swiper(".swiper", {
     slidesPerView: 1,
-    
+
     navigation: {
       nextEl: ".arrow_next",
       prevEl: ".arrow_prev",
@@ -33,25 +34,46 @@ $(document).ready(function () {
   function displaySlides(data) {
     $(data).each(function (i) {
       let item = data[i];
-      let slide = $(`<div><div class="banner_container-text"><h1 class="banner_title">${item.titleText}</h1>
+
+      let slide =
+        $(`<div><div class="banner_container-text"><h1 class="banner_title">${item.titleText}</h1>
       <h2 class="banner_subtitle">${item.text}</h2>
       <a href="" class="banner_btn">Узнать первым о старте продаж квартир</a></div>
       </div>`)
-        .addClass("swiper-slide banner_background")
-        .attr("id", item.data)
-        .css("background-image", "url(" + item.url + ")");
-        
+          .addClass("swiper-slide banner_background")
+          .attr("id", item.data)
+          .css("background-image", "url(" + item.url + ")");
+    
       swiper.appendSlide(slide);
     });
+   
   }
 
   displaySlides(slides);
- 
-  $(".arrow_next").click(function () {
-    $('#active_count').text('0' + $(".swiper-slide-active").attr("id"))
+  console.log($(".swiper-slide-active").attr("id"))
+  $(".arrow_next").on('click', function () {
+    $("#active_count").text("0" + $(".swiper-slide-active").attr("id")); 
+   
+    $(".banner_navigation-text").each(function(i) {
+        let currentItem = $(".banner_navigation-text")[i]
+        if ($(".swiper-slide-active").attr("id") == $(currentItem).attr('data')) {
+            $(this).addClass('current')
+        } else {
+            $(this).removeClass('current')
+        }
+    })
   });
 
-  $(".arrow_prev").click(function () {
-    $('#active_count').text('0' + $(".swiper-slide-active").attr("id"))
+  $(".arrow_prev").on('click', function () {
+    $("#active_count").text("0" + $(".swiper-slide-active").attr("id"));
+    
+    $(".banner_navigation-text").each(function(i) {
+        let currentItem = $(".banner_navigation-text")[i]
+        if ($(".swiper-slide-active").attr("id") == $(currentItem).attr('data')) {
+            $(this).addClass('current')
+        } else {
+            $(this).removeClass('current')
+        }
+    })
   });
 });
