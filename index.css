@@ -234,6 +234,10 @@ nav {
     margin-right: 5px;
 }
 
+.form_section {
+    padding-bottom: 91px;
+}
+
 .form_container {
     max-width: 1043px;
     width: 100%;
@@ -507,7 +511,7 @@ nav {
 
     .form_section {
         margin-top: 104px;
-        padding-bottom: 100px;
+        padding-bottom: 100px !important;
     }
 
     .form_container {
@@ -522,7 +526,7 @@ nav {
     }
 
     .open {
-        content: url("/assets/images/burger_open.png")
+        content: url("/assets/images/burger_open.png");
     }
 
     .mobile_navigtaion {
