@@ -46,10 +46,6 @@
     height: 100%;
 }
 
-.mobile_navigation {
-    display: none !important;
-}
-
 header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows, .form_block {
     display: flex;
     flex-direction: row;
@@ -591,7 +587,6 @@ nav {
         width: 110px;
         height: 24px;
     }
-
 
     @keyframes appearens {
         0% {
