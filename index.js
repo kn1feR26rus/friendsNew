@@ -2,7 +2,6 @@ $(document).ready(function () {
   let windowWidth = $(window).width();
   let swiper = new Swiper(".swiper", {
     slidesPerView: 1,
-
     navigation: {
       nextEl: ".arrow_next",
       prevEl: ".arrow_prev",
@@ -112,7 +111,6 @@ $(document).ready(function () {
   $(".arrow_prev").on("click", function () {
     $("#active_count").text("0" + $(".swiper-slide-active").attr("id"));
     $(".mobile_active_count").text("0" + $(".swiper-slide-active").attr("id"));
-
     $(".banner_navigation-text").each(function (i) {
       let currentItem = $(".banner_navigation-text")[i];
       if ($(".swiper-slide-active").attr("id") == $(currentItem).attr("data")) {
