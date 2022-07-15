@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  let windowWidth = $(window).width()
+
   let swiper = new Swiper(".swiper", {
     slidesPerView: 1,
 
@@ -31,6 +33,28 @@ $(document).ready(function () {
     },
   ];
 
+  const mobileSlides = [
+    {
+      url: "/assets/images/banner1.png",
+      data: 01,
+      titleText:
+        "Скоро! Новый проект рядом с бульваром Щипакина ",
+      text: "Новое качество жизни в центре событий большого города!",
+    },
+    {
+      url: "/assets/images/banner2.png",
+      data: 02,
+      titleText: "Покупать на старте максимально выгодно!",
+      text: "Стоимость квадратного метра в наших микрорайонах с момента старта продаж до сдачи дома в среднем вырастает на 20%",
+    },
+    {
+      url: "/assets/images/banner3.png",
+      data: 03,
+      titleText: "Большой выбор планировочных решений!",
+      text: "Только на старте продаж вы можете подобрать себе планировку с максимально удобным расположением и лучшим видом из окна",
+    },
+  ];
+
   function displaySlides(data) {
     $(data).each(function (i) {
       let item = data[i];
@@ -43,16 +67,21 @@ $(document).ready(function () {
           .addClass("swiper-slide banner_background")
           .attr("id", item.data)
           .css("background-image", "url(" + item.url + ")");
-    
-      swiper.appendSlide(slide);
+        swiper.appendSlide(slide);
     });
-   
+  }
+
+  if (windowWidth > 768) {
+    displaySlides(slides);
+  } else {
+    displaySlides(mobileSlides);
   }
 
   displaySlides(slides);
-  console.log($(".swiper-slide-active").attr("id"))
+
   $(".arrow_next").on('click', function () {
-    $("#active_count").text("0" + $(".swiper-slide-active").attr("id")); 
+    $("#active_count").text("0" + $(".swiper-slide-active").attr("id"));
+    $(".mobile_active_count").text("0" + $(".swiper-slide-active").attr("id"));
    
     $(".banner_navigation-text").each(function(i) {
         let currentItem = $(".banner_navigation-text")[i]
@@ -66,6 +95,7 @@ $(document).ready(function () {
 
   $(".arrow_prev").on('click', function () {
     $("#active_count").text("0" + $(".swiper-slide-active").attr("id"));
+    $(".mobile_active_count").text("0" + $(".swiper-slide-active").attr("id"));
     
     $(".banner_navigation-text").each(function(i) {
         let currentItem = $(".banner_navigation-text")[i]

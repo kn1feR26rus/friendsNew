@@ -2,26 +2,36 @@
     font-family: 'Lora';
     src: url('/assets/fonts/Lora.ttf');
 }
+
 @font-face {
     font-family: 'Inter';
     src: url('/assets/fonts/Inter-Regular.otf');
 }
+
 @font-face {
     font-family: 'Inter-bold';
     src: url('/assets/fonts/Inter-Black.otf');
 }
+
 @font-face {
     font-family: 'Nunito';
     src: url('/assets/fonts/NunitoSans-Regular.ttf');
 }
+
 * {
     margin: 0;
     padding: 0;
 }
+
+.mobile_navigation {
+    display: none;
+}
+
 header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows, .form_block {
     display: flex;
     flex-direction: row;
 }
+
 .banner_navigation, .form_container {
     display: flex;
     flex-direction: column;
@@ -31,13 +41,16 @@ header {
     width: 100%;
     justify-content: space-around;
 }
+
 .header_logo {
     width: 127px;
     height: 50px;
 }
+
 nav {
     align-items: center;
 }
+
 .nav_item {
     text-decoration: none;
     font-family: Inter;
@@ -47,12 +60,15 @@ nav {
     line-height: 17px;
     color: #000000;
 }
+
 .nav_item:not(:first-child) {
     margin-left: 57px;
 }
+
 .header_contacts {
     align-items: center;
 }
+
 .header_contacts-phone {
     font-family: Nunito;
     margin-right: 33px;
@@ -63,24 +79,29 @@ nav {
     line-height: 22px;
     color: #000000;
 }
+
 .header_contacts-logo {
     width: 136px;
     height: 26px;
 }
+
 .banner {
     width: 100%;
     background-color: #436B65;
     height: 588px;
 }
+
 .banner_container-text {
     color: white;
     max-width: 868px;
     width: 100%;
     margin: 161px auto;
 }
+
 .banner_title, .banner_subtitle {
     margin-bottom: 20px;
 }
+
 .banner_title {
     font-family: Lora;
     font-style: normal;
@@ -89,6 +110,7 @@ nav {
     line-height: 103.5%;
     color: #FFFFFF;
 }
+
 .banner_subtitle {
     width: 100%;
     font-family: Inter;
@@ -99,6 +121,7 @@ nav {
     color: #FFFFFF;
     padding-bottom: 20px;
 }
+
 .banner_btn {
     text-decoration: none;
     color: #2B2523;
@@ -114,30 +137,38 @@ nav {
     text-align: center;
     padding: 13px 50px;
 }
+
 .active {
     display: flex;
 }
+
 .swiper {
     margin: 0 !important;
 }
+
 .banner_navigation-arrow {
     width: 50px;
     height: 20px;
 }
+
 .banner_container, .banner_background {
     max-width: 1043px;
 }
+
 .banner_background {
     border-radius: 0 200px 0 0;
 }
+
 .swiper_slide {
     max-width: 1043px;
 }
+
 .banner_navigation {
     max-width: 16.9%;
     width: 100%;
     margin: 199px 0 0 28px;
 }
+
 .banner_navigation-text {
     margin-bottom: 26px;
     font-family: Inter;
@@ -148,6 +179,7 @@ nav {
     text-transform: uppercase;
     color: #FFFFFF;
 }
+
 .banner_navigation-counter {
     font-family: Inter;
     font-style: normal;
@@ -158,6 +190,7 @@ nav {
     color: #FFFFFF;
     margin-bottom: 24px;
 }
+
 #active_count {
     font-family: Inter-bold;
     font-size: 24px;
@@ -165,6 +198,7 @@ nav {
     font-weight: 900;
     margin-right: 5px;
 }
+
 .form_container {
     max-width: 1043px;
     width: 100%;
@@ -172,11 +206,13 @@ nav {
     border-radius: 0 0 71px 0;
     padding: 51px 0 60px;
 }
+
 .form {
     max-width: 885px;
     width: 100%;
     margin: 25px auto;
 }
+
 .form_title, .form_subtitle {
     font-family: Lora;
     font-style: normal;
@@ -188,6 +224,7 @@ nav {
     width: 100%;
     margin: 0 auto;
 }
+
 .form_email {
     font-family: Inter;
     border: none;
@@ -204,6 +241,7 @@ nav {
     color: #333333;
     margin-bottom: 15px;
 }
+
 .form_submit {
     font-family: Inter;
     width: 258px;
@@ -219,6 +257,7 @@ nav {
     margin-right: 18px;
     cursor: pointer;
 }
+
 .form_label {
     max-width: 167px;
     font-family: Inter;
@@ -228,16 +267,20 @@ nav {
     line-height: 12px;
     color: #FFFFFF;
 }
+
 .current {
     border-bottom: 1px solid white;
 }
+
 .banner_navigation-text {
     max-width: 178px;
     padding-bottom: 6px;
 }
+
 .banner_navigation-block {
     margin-bottom: 26px;
 }
+
 .banner_navigation-arrow {
     background-image: url('/assets/images/arrow.png');
     background-color: transparent;
@@ -249,16 +292,20 @@ nav {
     height: 7px;
     cursor: pointer;
 }
+
 .banner_navigation-arrow::after {
     display: none;
 }
+
 .arrow_next {
     transform: rotate(-360deg);
 }
+
 .arrow_prev {
     transform: rotate(-180deg);
     margin-right: 7px;
 }
+
 .swiper-button-disabled {
     opacity: .3;
 }
@@ -267,14 +314,33 @@ nav {
     .form_container {
         max-width: 100%;
     }
+
     .swiper {
         max-width: 75%;
     }
+
     .banner_navigation {
         max-width: 27%;
     }
+
     .header_contacts-phone {
         font-size: 14px;
+    }
+
+    .banner_container-text {
+        margin: 161px 0 0 40px;
+    }
+
+    .banner_title {
+        font-size: 39px;
+    }
+
+    .banner_subtitle {
+        font-size: 20px;
+    }
+
+    .form_title, .form_subtitle, .form {
+        margin-left: 40px;
     }
 }
 
@@ -283,6 +349,7 @@ nav {
         width: 100px;
         height: 35px;
     }
+
     .nav_item:not(:first-child) {
         margin-left: 30px;
     }
@@ -298,18 +365,94 @@ nav {
     .banner_subtitle {
         font-size: 18px;
     }
+
     .header_contacts-logo {
         width: 100px;
         height: 17px;
     }
+
     .nav_item:not(:first-child) {
         margin-left: 20px;
     }
+
     .form_title, .form_subtitle {
         font-size: 25px;
     }
 }
 
 @media screen and (max-width: 769px) {
-    
+    .banner {
+        flex-direction: column;
+        height: 568px;
+    }
+
+    .banner_title {
+        max-width: 358px;
+        font-size: 35px;
+        line-height: 107%;
+    }
+
+    .banner_subtitle {
+        max-width: 375px;
+        font-size: 17px;
+        line-height: 123.5%;
+    }
+
+    .banner_background {
+        background-size: 346%;
+        background-position: 40%;
+    }
+
+    .swiper {
+        max-width: 100%;
+        width: 100%;
+        height: 568px;
+    }
+
+    .banner_background {
+        border-radius: 0;
+    }
+
+    .deskop_navigation {
+        display: none;
+    }
+
+    .mobile_navigation {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        background-color: #436B65;
+        ;
+        height: 112px;
+        align-items: flex-end;
+        justify-content: center;
+        border-radius: 0px 0px 0px 100px;
+
+    }
+
+    .banner_navigation-counter, .banner_navigation-arrows {
+        margin-right: 27px;
+    }
+
+    .form_container {
+        background-color: #FFFFFF;
+    }
+
+    .form_title, .form_subtitle {
+        color: #333333;
+    }
+
+    .form_label {
+        color: #A9A9A9;
+    }
+
+    header {
+        display: none;
+    }
+
+    .form_title, .form_subtitle, .form {
+        max-width: 100%;
+        margin: 0;
+    }
 }

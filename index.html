@@ -42,21 +42,44 @@
         <div class="swiper">
           <div class="swiper-wrapper banner_container"></div>
         </div>
-        <div class="banner_navigation">
-          <div class="banner_navigation-block"><span class="banner_navigation-text current" data="1">НОВЫЙ ЖИЛОЙ КВАРТАЛ</span></div>
-          <div class="banner_navigation-block"><span class="banner_navigation-text" data="2">ВЫГОДНАЯ ИНВЕСТИЦИЯ</span></div>
-          <div class="banner_navigation-block"><span class="banner_navigation-text" data="3">ВЫБОР ПЛАНИРОВОК</span></div>
+        <div class="banner_navigation deskop_navigation">
+          <div class="banner_navigation-block">
+            <span class="banner_navigation-text current" data="1"
+              >НОВЫЙ ЖИЛОЙ КВАРТАЛ</span
+            >
+          </div>
+          <div class="banner_navigation-block">
+            <span class="banner_navigation-text" data="2"
+              >ВЫГОДНАЯ ИНВЕСТИЦИЯ</span
+            >
+          </div>
+          <div class="banner_navigation-block">
+            <span class="banner_navigation-text" data="3"
+              >ВЫБОР ПЛАНИРОВОК</span
+            >
+          </div>
           <div class="banner_navigation-counter">
             <span class="banner_navigation-count" id="active_count">01 </span>
 
             <span class="banner_navigation-count">| 03</span>
           </div>
           <div class="banner_navigation-arrows">
-            <button class="banner_navigation-arrow arrow_prev "></button>
+            <button class="banner_navigation-arrow arrow_prev"></button>
             <button class="banner_navigation-arrow arrow_next"></button>
           </div>
         </div>
       </section>
+      <div class="banner_navigation mobile_navigation">
+        <div class="banner_navigation-counter">
+          <span class="banner_navigation-count mobile_active_count" id="active_count">01 </span>
+
+          <span class="banner_navigation-count">| 03</span>
+        </div>
+        <div class="banner_navigation-arrows">
+          <button class="banner_navigation-arrow arrow_prev"></button>
+          <button class="banner_navigation-arrow arrow_next"></button>
+        </div>
+      </div>
       <section class="form_section">
         <div class="form_container">
           <span class="form_title">Будьте первым!</span>
@@ -64,7 +87,7 @@
             >Подписывайтесь на новости о новом проекте</span
           >
           <form action="" class="form">
-            <input type="email" class="form_email" required value="Email"/>
+            <input type="email" class="form_email" required value="Email" />
             <div class="form_block">
               <input
                 type="submit"
