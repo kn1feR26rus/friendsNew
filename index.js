@@ -68,7 +68,6 @@ $(document).ready(function () {
 
   $(window).on("resize", function () {
     location.reload();
-    console.log(windowWidth);
     if (windowWidth > 768) {
       displaySlides(data);
     } else {
