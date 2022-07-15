@@ -23,8 +23,27 @@
     padding: 0;
 }
 
-.mobile_navigation {
+.mobile_menu {
     display: none;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 19px;
+    left: 24px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile_navigation {
+    display: none !important;
 }
 
 header, nav, .header_contacts, .banner, .banner_navigation-counter, .banner_navigation-arrows, .form_block {
@@ -96,6 +115,8 @@ nav {
     max-width: 868px;
     width: 100%;
     margin: 161px auto;
+    z-index: 2222;
+    position: relative;
 }
 
 .banner_title, .banner_subtitle {
@@ -120,6 +141,16 @@ nav {
     line-height: 27px;
     color: #FFFFFF;
     padding-bottom: 20px;
+}
+
+.banner_background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 2.86%, rgba(0, 0, 0, 0.63) 32.77%, rgba(0, 0, 0, 0.7) 53.65%, rgba(0, 0, 0, 0.57) 64.58%, rgba(0, 0, 0, 0.08) 79.69%, rgba(0, 0, 0, 0) 100%);
 }
 
 .banner_btn {
@@ -387,15 +418,20 @@ nav {
     }
 
     .banner_title {
-        max-width: 358px;
         font-size: 35px;
         line-height: 107%;
+        height: 111px;
     }
 
     .banner_subtitle {
-        max-width: 375px;
+        max-width: 90%;
         font-size: 17px;
         line-height: 123.5%;
+        height: 84px;
+    }
+
+    .banner_btn {
+        padding: 13px 38px;
     }
 
     .banner_background {
@@ -418,7 +454,7 @@ nav {
     }
 
     .mobile_navigation {
-        display: flex;
+        display: flex !important;
         max-width: 100%;
         width: 100%;
         margin: 0;
@@ -428,7 +464,6 @@ nav {
         align-items: flex-end;
         justify-content: center;
         border-radius: 0px 0px 0px 100px;
-
     }
 
     .banner_navigation-counter, .banner_navigation-arrows {
@@ -454,5 +489,106 @@ nav {
     .form_title, .form_subtitle, .form {
         max-width: 100%;
         margin: 0;
+    }
+
+    .form_title, .form_subtitle {
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+
+    .form_title {
+        font-weight: bold;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .form_section {
+        margin-top: 104px;
+        padding-bottom: 100px;
+    }
+
+    .form_container {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 86.5%;
+        width: 100%;
+    }
+
+    .form {
+        margin-top: 27px;
+    }
+
+    .open {
+        content: url("/assets/images/burger_open.png")
+    }
+
+    .mobile_navigtaion {
+        width: 100%;
+        height: 480px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3333;
+        display: none;
+        animation: appearens 1s forwards;
+        flex-direction: row;
+    }
+
+    .mobile_menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+
+    .menu, .nav_img-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 40%;
+        width: 100%;
+        margin-bottom: 154px;
+    }
+
+    .nav_img-container {
+        align-items: center;
+        margin-bottom: 135px;
+    }
+
+    .close_btn {
+        position: absolute;
+        right: 36px;
+        top: 36px;
+        cursor: pointer;
+    }
+
+    .oveflow_hidden {
+        overflow: hidden;
+    }
+
+    .menu_item {
+        font-family: Lora;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 118.6%;
+        color: #000000;
+        margin-bottom: 38px;
+        text-decoration: none;
+    }
+
+    .nav_img {
+        width: 110px;
+        height: 24px;
+    }
+
+    @keyframes appearens {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 }
